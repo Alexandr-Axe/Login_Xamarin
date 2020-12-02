@@ -14,5 +14,11 @@ namespace Login_Xamarin
         {
             InitializeComponent();
         }
+
+        private void varta_Clicked(object sender, EventArgs e)
+        {
+            Page p = new Privitani();
+            Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(p));
+        }
     }
 }
