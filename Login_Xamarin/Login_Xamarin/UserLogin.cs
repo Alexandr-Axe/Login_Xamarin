@@ -19,17 +19,17 @@ namespace Login_Xamarin
             {
                 if (value.Length >= 8)
                 {
-                    if (Regex.IsMatch(value, @"\d"))
+                    if (Regex.IsMatch(value, "^[a-zA-Z0-9 ]*$"))
                     {
                         foreach (char Item in value)
                         {
                             if (char.IsUpper(Item)) Heslo = value;
-                            else Heslo = "chybí velký znak"; //else displayalert
+                            else Heslo = "Chybí velký znak"; //else displayalert
                         }
                     }
-                    else Heslo = "chybí číslo"; //else displayalert číslo
+                    else Heslo = "Obsahuje speciální znak nebo nebylo zadáno číslo"; //else displayalert číslo
                 } 
-                else Heslo = "krátké heslo"; //else displayalert moc krátký
+                else Heslo = "Krátké heslo"; //else displayalert moc krátký
             }
         }
 

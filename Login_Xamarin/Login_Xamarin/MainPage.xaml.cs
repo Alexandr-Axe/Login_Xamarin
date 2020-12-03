@@ -19,8 +19,12 @@ namespace Login_Xamarin
         private void varta_Clicked(object sender, EventArgs e)
         {
             UL = new UserLogin(Titulko.SelectedItem.ToString(), Username.Text, UPassword.Text);
-            Page p = new Privitani(UL);
-            Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(p));
+            if (UL.CheckHeslo != UPassword.Text) Application.Current.MainPage.DisplayAlert("Chyba", UL.CheckHeslo, "OK");
+            else
+            {
+                Page p = new Privitani(UL);
+                Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(p));
+            }
         }
     }
 }
