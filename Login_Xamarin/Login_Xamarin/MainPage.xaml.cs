@@ -15,9 +15,11 @@ namespace Login_Xamarin
             InitializeComponent();
         }
 
+        UserLogin UL;
         private void varta_Clicked(object sender, EventArgs e)
         {
-            Page p = new Privitani();
+            UL = new UserLogin(Titulko.SelectedItem.ToString(), Username.Text, UPassword.Text);
+            Page p = new Privitani(UL);
             Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(p));
         }
     }

@@ -7,8 +7,8 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Image Source="xxx.xxx" Aspect="AspectFill" HeightRequest="200"/>
-        <Picker Title="Vyber oslovení" Margin="20, 20, 20, 20">
+        <!--<Image Source="xxx.xxx" Aspect="AspectFill" HeightRequest="200"/>-->
+        <Picker x:Name="Titulko" Title="Vyber oslovení" Margin="20, 20, 20, 20">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Pan</x:String>

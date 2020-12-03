@@ -12,9 +12,12 @@ namespace Login_Xamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Privitani : ContentPage
     {
-        public Privitani()
+        public Privitani(UserLogin UL)
         {
             InitializeComponent();
+            labelTitul.Text = UL.Titul;
+            labelJmeno.Text = UL.Jmeno;
+            labelHeslo.Text = UL.CheckHeslo;
         }
     }
 }

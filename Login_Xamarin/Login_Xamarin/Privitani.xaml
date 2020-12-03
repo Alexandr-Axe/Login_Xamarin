@@ -4,9 +4,9 @@
              x:Class="Login_Xamarin.Privitani">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="labelTitul"/>
+            <Label x:Name="labelJmeno"/>
+            <Label x:Name="labelHeslo"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
